@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Your Part</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span>Partify</span>
+            </div>
+            <p class="tagline">Find the perfect parts for your vehicle</p>
+        </header>
+        
+        <div class="form-container">
+            <h1>Vehicle Parts Finder</h1>
+            <p class="subtitle">Select your vehicle details to find compatible parts</p>
+            
+            <form id="partsForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <select id="year" required>
+                            <option value="">Select Year</option>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="make">Make</label>
+                        <select id="make" required disabled>
+                            <option value="">Select Make</option>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <select id="model" required disabled>
+                            <option value="">Select Model</option>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productType">Product Type</label>
+                        <select id="productType" required disabled>
+                            <option value="">Select Product Type</option>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="submit" class="btn" id="findPartsBtn" disabled>
+                        <i class="fas fa-search"></i> Find Parts
+                    </button>
+                </div>
+            </form>
+            
+            <div class="results" id="resultsSection">
+                <h2><i class="fas fa-check-circle"></i> Parts Found!</h2>
+                <div class="result-content">
+                    <div class="vehicle-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="vehicle-details">
+                        <div class="detail-row">
+                            <div class="detail-label">Selected Vehicle:</div>
+                            <div class="detail-value" id="vehicleDetail">-</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Product Type:</div>
+                            <div class="detail-value" id="productDetail">-</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Compatible Parts:</div>
+                            <div class="detail-value" id="partsCount">-</div>
+                        </div>
+                        <a href="#" class="view-parts" id="viewPartsLink" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> View Available Parts
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="examples">
+            <h2>Popular Vehicle Parts</h2>
+            <div class="example-cards">
+                <div class="card">
+                    <div class="card-image">
+                        <i class="fas fa-car-front"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>RAM 1500 Front Bumper</h3>
+                        <p>Durable front bumpers for RAM 1500 (2011-2015)</p>
+                        <a href="https://partifyusa.com/collections/2015-ram-1500?filter.p.product_type=Front+Bumper" target="_blank">
+                            View parts <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+                        <i class="fas fa-car-rear"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>RAM 1500 Rear Bumper</h3>
+                        <p>Protective rear bumpers for RAM 1500 (2011-2015)</p>
+                        <a href="https://partifyusa.com/collections/2015-ram-1500?filter.p.product_type=Rear+Bumper" target="_blank">
+                            View parts <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+                        <i class="fas fa-car-burst"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Toyota Corolla Fender</h3>
+                        <p>Passenger side fenders for Corolla (2013-2017)</p>
+                        <a href="https://partifyusa.com/collections/2017-Toyota-Corolla?filter.p.product_type=Passenger+Side+Fender" target="_blank">
+                            View parts <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Partify. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    </body>
+    </html>
